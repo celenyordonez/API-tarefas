@@ -49,7 +49,7 @@ router.get("/tasks/:id", async (req, res) => {
     return res.status(500).json({ error: "Erro ao buscar tarefa" });
   }
 });
- //Atualizar por id
+ //Atualizar por id (Atualizar uma tarefa existente)
 router.put("/tasks/:id", async (req, res) => {
   try {
     const id = Number(req.params.id);
@@ -71,7 +71,7 @@ router.put("/tasks/:id", async (req, res) => {
     return res.status(404).json({ error: "Tarefa não encontrada" });
   }
 });
- //Deletar por id
+ //Deletar por id (Remover uma tarefa)
 router.delete("/tasks/:id", async (req, res) => {
     try {
         const id = Number(req.params.id)
